@@ -12,20 +12,15 @@ spec:
   releaseName: ghost
   chart:
     spec:
-      chart: charts/ghost
+      chart: charts/podinfo
   values:
     image:
-      repository: bitnami/ghost
-      tag: 3.1.1-debian-9-r0
-    persistence:
-      enabled: false
+      repository: azurearcfork8sdev.azurecr.io/test-dependencies/stefanprodan/podinfo
+      tag: "4.0.6"
+    replicaCount: 1
     resources:
       requests:
         memory: 32Mi
         cpu: 10m
     service:
       type: ClusterIP
-    mariadb:
-      master:
-        persistence:
-          enabled: false
