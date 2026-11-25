@@ -14,6 +14,6 @@ spec:
       chart: charts/podinfo
   values:
     image:
-      repository: stefanprodan/podinfo
-      tag: 4.0.6
+      repository: azurearcfork8sdev.azurecr.io/flux-test-dependencies/stefanprodan/podinfo
+      tag: "4.0.6"
     replicaCount: 3
